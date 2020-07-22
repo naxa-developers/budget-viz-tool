@@ -1,0 +1,40 @@
+.common-title{
+    .title{
+        font-size: 55px;
+        line-height: 80px;
+        font-weight: 400;
+        color: $white-color;
+        span{
+            font-family: $nav-fonts;
+            font-size: 32px;
+            font-weight: 400;
+            color: $primary-color;
+            line-height: 75px;
+            &.is-white{
+                color: $white-color;
+            }
+            &.is-lg{
+                font-size: 55px;
+            }
+        }
+    }
+    
+    &.is-center{
+        text-align: center;
+        @include justify-content-center;
+        @include align-items-center;
+    }
+    &.is-end{
+        @include justify-content-between;
+        @include align-items-end;
+    }
+    &.between{
+        @include justify-content-between;
+        @include align-items-center;
+    }
+    &.is-white{
+        h3,b,span{
+            color:$white-color;
+        }
+    }
+}
