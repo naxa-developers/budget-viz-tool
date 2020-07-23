@@ -1,21 +1,53 @@
 .common-title{
     .title{
         font-size: 55px;
-        line-height: 80px;
+        line-height: 70px;
         font-weight: 400;
         color: $white-color;
+        font-family: $heading-fonts;
+        @media #{$breakpoint-lg-desktop}{
+            font-size: 40px;
+            line-height: 50px;
+        }
+        @media #{$breakpoint-desktop}{
+            font-size: 34px;
+            line-height: 45px;
+        }
+        @media #{$breakpoint-lg}{
+            text-align: center;
+            font-size: 26px;
+            line-height: 26px;
+        }
         span{
-            font-family: $nav-fonts;
             font-size: 32px;
             font-weight: 400;
             color: $primary-color;
             line-height: 75px;
+            @media #{$breakpoint-lg-desktop}{
+                font-size: 22px;
+                line-height: 65px;
+            }
+            @media #{$breakpoint-desktop}{
+                font-size: 18px;
+                line-height: 50px;
+            }
             &.is-white{
                 color: $white-color;
             }
             &.is-lg{
                 font-size: 55px;
+                @media #{$breakpoint-lg-desktop}{
+                    font-size: 46px;
+                    line-height: 65px;
+                }
+                @media #{$breakpoint-desktop}{
+                    font-size: 36px;
+                    line-height: 50px;
+                }
             }
+        }
+        &.is-dark{
+            color: $secondary-color;
         }
     }
     

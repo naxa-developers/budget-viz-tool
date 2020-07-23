@@ -10,12 +10,11 @@ header{
     &.scroll-header{
         background: $white-color;
         padding: 10px 1rem !important;
-        @include box-shadow(0 0 10px 2px $grey-color);
+        @include box-shadow(0 0 10px 2px lighten($shadow-bg, 50%));
         .header-in{
             a.logo{
                 img{
                     @include transition(all .4s ease);
-                    transform: scale(.7) !important;
                     &.logo-white{
                         display: none !important;
                     }
@@ -28,7 +27,8 @@ header{
                 ul {
                     li {
                         a {
-                            color: $heading-color !important;
+                            color: $secondary-color !important;
+                            &:hover,
                             &.active{
                                 color: $primary-color !important;
                             }
@@ -38,10 +38,24 @@ header{
             }
         }
     }
+    .wrap-header{
+        @media #{$breakpoint-lg-desktop}{
+            padding: 0 15vh;
+        }
+        @media #{$breakpoint-desktop}{
+            padding: 0 20vh;
+        }
+        @media #{$breakpoint-xl}{
+            padding: 0 9vh;
+        }
+        @media #{$breakpoint-lg}{
+            padding: 0 3vh;
+        }
+    }
     &.site-header{
-        padding: 30px 1rem;
-        @media #{$breakpoint-ls}{
-            padding:.6125rem 0;
+        padding: 26px 1rem;
+        @media #{$breakpoint-desktop}{
+            padding: 18px 1rem;
         }
         .header-in{
             @include display-flex(flex);
@@ -49,6 +63,13 @@ header{
             @include align-items-center;
             a.logo{
                 img{
+                    max-width: 260px;
+                    @media #{$breakpoint-lg-desktop}{
+                        max-width: 200px;
+                    }
+                    @media #{$breakpoint-desktop}{
+                        max-width: 160px;
+                    }
                     @include transition(all .4s ease);
                     &.logo-white{
                         display: block;
@@ -56,9 +77,6 @@ header{
                     &.logo-black{
                         display:  none;
                     }
-                }
-                @media #{$breakpoint-xs}{
-                    max-width: 100px;
                 }
             }
             
@@ -76,6 +94,7 @@ header{
                 }
             }
             .menu{
+                @include transition(all .4s ease);
                 flex-grow: 1;
                 ul{
                     @include display-flex(flex);
@@ -84,6 +103,12 @@ header{
                     li{
                         &:not(:last-child){
                             margin-right: 55px;
+                            @media #{$breakpoint-lg-desktop}{
+                                margin-right: 50px;
+                            }
+                            @media #{$breakpoint-desktop}{
+                                margin-right: 45px;
+                            }
                         }
                         a{
                             font-family: $nav-fonts;
@@ -95,8 +120,14 @@ header{
                             &.active,&:hover{
                                 color:$primary-color;
                             }
+                            @media #{$breakpoint-lg-desktop}{
+                                font-size: .75rem;
+                            }
                             @media #{$breakpoint-desktop}{
-                                padding:1rem .6125rem;
+                                font-size: .625rem;
+                            }
+                            @media #{$breakpoint-md}{
+                                font-size: .75rem;
                             }
                         }
                     }
@@ -153,14 +184,13 @@ header{
                 height: 24px;
                 @include transition(all .5s ease-in-out);
                 display: none;
-    
+                cursor: pointer;
                 span {
                     position: absolute;
-                    height: 3px;
+                    height: 2px;
                     border-radius: 30px;
                     width: 100%;
-                    background-color: $secondary-color;
-                    top: 0;
+                    background-color: $primary-color;
                     transition: transform .2s ease-in-out, opacity .2s ease-in-out;
                     z-index: 1101;
     
@@ -170,11 +200,11 @@ header{
     
                     &:nth-child(2),
                     &:nth-child(3) {
-                        top: 8px;
+                        top: 6px;
                     }
     
                     &:nth-child(4) {
-                        top: 16px;
+                        top: 12px;
                     }
                 }
     
@@ -221,6 +251,7 @@ header{
                     right: -100%;
                     left: auto;
                     bottom: 0;
+                    @include transition(all .6s ease);
                     ul{
                         display: block;
                         li{
@@ -243,6 +274,10 @@ header{
             .header-in{
                 .menu{
                     right: 0;
+                    @include transition(all .6s ease);
+                    ul{
+                        margin-top: 40px;
+                    }
                 }
             }
         }

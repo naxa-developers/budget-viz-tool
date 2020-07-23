@@ -18,7 +18,19 @@ input,textarea {
             font-size: .775rem;
             text-transform: capitalize;
         }
-
+        @media #{$breakpoint-lg-desktop}{
+            font-size: .75rem;
+            @include input-placeholder {
+                font-size: .75rem;
+            }
+        }
+        @media #{$breakpoint-desktop}{
+            font-size: .625rem;
+            min-height: calc(1.75em + .75rem + 0px);
+            @include input-placeholder {
+                font-size: .625rem;
+            }
+        }
         &:focus {
             box-shadow: none;
             outline: none;

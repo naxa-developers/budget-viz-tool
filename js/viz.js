@@ -21,8 +21,6 @@
     }
     scroll_header();
 
-
-    
     function header_li(){
       $('.menu ul li').on('click', 'a', function(){
         if($(this).closest('a').next().hasClass('active')){
@@ -35,6 +33,14 @@
       })
     }
     header_li();
+
+    function toggle_button() {
+      $('.header-in .toggle-button').on('click', function () {
+        $(this).toggleClass('active');
+        $('body').toggleClass('Is-toggle');
+      });
+    }
+    toggle_button();
 
   });
 })(window.jQuery);

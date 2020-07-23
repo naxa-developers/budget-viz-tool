@@ -1,10 +1,10 @@
 body {
     font-family: $body-fonts;
-    background-color:$bg-color;
+    background-color:$white-color;
     position: relative;
     font-size: .875rem;
     line-height: 2;
-    color:$body-color;
+    color:$secondary-color;
     font-weight: 400;
     @media #{$breakpoint-desktop}{
         font-size: .875rem;
@@ -63,6 +63,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+
+.wrapper{
+    position: relative;
+    z-index: 11;
+}
 
 
 
