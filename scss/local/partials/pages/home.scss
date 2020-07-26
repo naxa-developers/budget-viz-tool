@@ -1,10 +1,15 @@
-.wrapper{
+.h-wrap{
     min-height: 100vh;
-    position: relative;
     padding-top: 95px;
     @media #{$breakpoint-lg-desktop}{
-        margin: 0 15vh;
         padding-top: 58px;
+    }
+}
+.wrapper{
+    position: relative;
+    z-index: 11;
+    @media #{$breakpoint-lg-desktop}{
+        margin: 0 15vh;
     }
     @media #{$breakpoint-desktop}{
         margin: 0 20vh;
@@ -63,11 +68,20 @@
             &.home_section{
                 .home-content{
                     padding-top: 200px;
+                    .common-title{
+                        max-width: 1200px;
+                    }
                     @media #{$breakpoint-lg-desktop}{
                        padding-top: 150px;
+                        .common-title{
+                            max-width: 900px;
+                        }   
                     }
                     @media #{$breakpoint-desktop}{
                         padding-top: 120px;
+                        .common-title{
+                            max-width: 740px;
+                        } 
                     }
                 }
                 ul{

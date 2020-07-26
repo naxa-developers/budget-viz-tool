@@ -18,23 +18,23 @@
             font-size: 26px;
             line-height: 26px;
         }
-        span{
+        span.title-span{
             font-size: 32px;
             font-weight: 400;
             color: $primary-color;
             line-height: 75px;
             @media #{$breakpoint-lg-desktop}{
                 font-size: 22px;
-                line-height: 65px;
+                line-height: ss65px;
             }
             @media #{$breakpoint-desktop}{
                 font-size: 18px;
                 line-height: 50px;
             }
-            &.is-white{
+            .is-white{
                 color: $white-color;
             }
-            &.is-lg{
+            .is-lg{
                 font-size: 55px;
                 @media #{$breakpoint-lg-desktop}{
                     font-size: 46px;
@@ -47,10 +47,26 @@
             }
         }
         &.is-dark{
-            color: $secondary-color;
+            color: $heading-color;
         }
-    }
+    } 
     
+    .section-title{
+        font-size: 28px;
+        font-family: $heading-fonts;
+        line-height: 40px;
+        color: $heading-color;
+        @media #{$breakpoint-lg-desktop}{
+            font-size: 22px;
+            line-height: 36px
+        }
+        @media #{$breakpoint-desktop}{
+            font-size: 17px;
+            line-height: 28px;
+        }
+        &is.white {color: $white-color;}
+    }
+
     &.is-center{
         text-align: center;
         @include justify-content-center;
