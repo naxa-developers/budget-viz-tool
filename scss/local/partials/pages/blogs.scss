@@ -1,0 +1,181 @@
+.blog_section{
+    .blog-content{
+        margin-top: 35px;
+        @media #{$breakpoint-desktop}{
+            margin-top: 25px;
+        }
+    }
+    .common-title{
+        .title{
+            text-align: center;
+        }
+    }
+    .blogs-row{
+        margin-top: 60px;
+        @media #{$breakpoint-lg-desktop}{
+            margin-top: 45px;
+        }
+        @media #{$breakpoint-desktop}{
+            margin-top: 35px;
+        }
+        @media #{$breakpoint-md}{
+            margin-top: 60px;
+           .row-wrap{
+                max-width: 260px;
+                margin: 0 auto;
+                .col-wrap{
+                    text-align: center;
+                    &:not(:last-child){
+                        margin-bottom: 50px;
+                    }
+                }
+           }
+        }
+        .main-card{
+            cursor: pointer;
+            @include transition(all .3s ease);
+            & > div{
+                @include transition(all .3s ease);
+            }
+            height: 100%;
+            &:hover{
+                transform: scale(.95);
+            }
+            .card-header{
+                padding: 0;
+                figure{
+                    height: 205px;
+                    @media #{$breakpoint-lg-desktop}{
+                        height: 170px;
+                    }
+                    @media #{$breakpoint-desktop}{
+                        height: 130px;
+                    }
+                    @media #{$breakpoint-md}{
+                        height: 120px
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .card-body{
+                padding: 40px 0 10px;
+                @media #{$breakpoint-lg-desktop}{
+                    padding: 25px 0 10px;
+                }
+                @media #{$breakpoint-desktop}{
+                    padding: 15px 0 10px;
+                }
+                & *{
+                    @include transition(all .3s ease);
+                }
+                span.date{
+                    font-size: 14px;
+                    line-height: 16px;
+                    font-family: $nav-fonts;
+                    letter-spacing: .9px;
+                    text-transform: uppercase;
+                    color: $heading-color;
+                    @media #{$breakpoint-lg-desktop}{
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                    @media #{$breakpoint-desktop}{
+                        font-size: 9.5px;
+                    }
+                }
+                h5{
+                    font-size: 30px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    color: $heading-color;
+                    margin: 10px 0 20px;
+                    @media #{$breakpoint-lg-desktop}{
+                        font-size: 25px;
+                        line-height: 36px;
+                        margin: 8px 0 15px;
+                    }
+                    @media #{$breakpoint-desktop}{
+                        font-size: 18px;
+                        line-height: 24px;
+                        margin: 5px 0 10px;
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 26px;
+                    color: $heading-color;
+                    max-width: 380px;
+                    @media #{$breakpoint-lg-desktop}{
+                        font-size: 12px;
+                        line-height: 20px;
+                        max-width: 330px;
+                    }
+                    @media #{$breakpoint-desktop}{
+                        font-size: 9.5px;
+                        line-height: 16px;
+                        max-width: 260px;
+                    }
+                    @media #{$breakpoint-md}{
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .visit-link {
+        margin-top: 60px;
+        text-align: center;
+        @media #{$breakpoint-lg-desktop}{
+            margin-top: 30px;
+        }
+        @media #{$breakpoint-desktop}{
+            margin-top: 20px;
+        }
+        @media #{$breakpoint-md}{
+           margin-top: 30px;
+        }
+        a{
+            @include display-flex(flex);
+            @include align-items-center;
+            @include justify-content-center;
+            letter-spacing: .8px;
+            font-size: 15px;
+            line-height: 16px;
+            color: $primary-color;
+            font-family: $nav-fonts;
+            text-transform: uppercase;
+            @include transition(all .3s ease);
+            i{
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 0;
+                color: $primary-color;
+                margin-left: 8px;
+                @include transition(all .3s ease);
+            }
+            &:hover{
+                color: $primary-color;
+                i{
+                    color: $primary-color;
+                }
+            }
+            @media #{$breakpoint-lg-desktop}{
+                font-size: 12px;
+                line-height: 12px;
+                i{
+                    font-size: 20px;
+                }
+            }
+            @media #{$breakpoint-desktop}{
+                font-size: 10px;
+                line-height: 10px;
+                i{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
