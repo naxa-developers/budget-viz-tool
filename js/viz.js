@@ -75,6 +75,43 @@
     text.reveal(10000);
   }
   shuffle_text(); */
+  function pagination(){
+    $('.pagination').on('click', 'a', function(){
+      if($(this).closest('a').next().hasClass('current')){
+        $('.pagination a').removeClass('current');
+    }
+    else{
+      $('.pagination a').removeClass('current');
+    }
+    $(this).closest('a').addClass('current');
+    })
+  }
+  pagination();
+
+   //pie-chart
+   var options = {
+    series: [90, 80],
+    colors:[ '#7CB5EC', '#22264D'],
+    chart: {
+      height: '280',
+    type: 'pie',
+  },
+  labels: ['Federal Aid', 'Provincial Resourcesg'],
+  legend: {show:false},
+  responsive: [{
+    breakpoint: 1560,
+    options: {
+      chart: {
+        height: 200,
+      },
+     
+    },
+  
+  }]
+  };
+
+  var chart = new ApexCharts(document.querySelector("#pie-chart"), options);
+  chart.render();
 
 
 })(window.jQuery);

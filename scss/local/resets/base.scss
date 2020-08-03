@@ -7,8 +7,8 @@ body {
     color:$heading-color;
     font-weight: 400;
     @media #{$breakpoint-lg-desktop}{
-        font-size: .783rem;
-        line-height: 22px;
+        font-size: .75rem;
+        line-height: 20px;
     }
     @media #{$breakpoint-desktop}{
         font-size: .625rem;
@@ -23,6 +23,9 @@ body {
     }
 }
 
+.background-dark{
+    background: $secondary-color;
+}
 
 .body-container{
     &.blur-bg{

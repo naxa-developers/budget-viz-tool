@@ -22,6 +22,7 @@
         margin: 0 3vh;
     }
 }
+
 .one-pg-web{
     .smooth-scroll{
         section{
@@ -175,5 +176,111 @@
         }
     }
 }
+
+.page-header{
+    position: relative;
+    padding: 285px 0 95px;
+    @media #{$breakpoint-lg-desktop}{
+        padding: 225px 0 80px;
+    }
+    @media #{$breakpoint-desktop}{
+        padding: 170px 0 65px;
+    }
+    &::after {
+        position: absolute;
+        content: " ";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        @media #{$breakpoint-pt}{
+            background-size: cover;
+        }
+    }
+    &.about-header{
+        &::after{
+            background-image: url('./.././img/about-budget-bg.png');
+            background-color: lighten($dark-overlay, 3%);
+        }
+    }
+    &.blog-header{
+        &::after{
+            background-image: url('./.././img/blog_bg.png');
+            background-color: $secondary-color;
+        }
+    }
+    .row-wrap{
+        @include justify-content-center;
+        position: relative;
+    }
+  
+    span{
+        text-transform: uppercase;
+        font-family: $nav-fonts;
+        // font-size: 14px;
+        letter-spacing: .8px;
+        color: $primary-color;
+        display: block;
+        // @media #{$breakpoint-lg-desktop}{
+        //    font-size: 13px;
+        // }
+        // @media #{$breakpoint-desktop}{
+        //     font-size: 11px;
+        // }
+        @media #{$breakpoint-lg}{
+            text-align: center;
+        }
+    }
+    .common-title{
+        margin-top: 18px;
+        @media #{$breakpoint-desktop}{
+            margin-top: 15px;
+        }
+    }
+    &.about-header{
+        .common-title{
+            max-width: 1200px;
+            @media #{$breakpoint-lg-desktop}{
+                max-width: 850px;
+            }
+            @media #{$breakpoint-desktop}{
+                max-width: 700px;
+            }
+        }
+    }
+    &.blog-header{
+        .row-wrap{
+            @include justify-content-center;
+        }
+        .common-title{
+            max-width: 600px;
+            @media #{$breakpoint-lg-desktop}{
+                max-width: 500px;
+            }
+            @media #{$breakpoint-desktop}{
+                max-width:  400px;
+            }
+        }
+    }
+    &.blog-items-header{
+        text-align: center;
+        background: $secondary-color;
+        span{color: $white-color;}
+        .col-wrap{
+            position: relative;
+            top: -130px;
+            @media #{$breakpoint-lg-desktop}{
+                top: -100px;
+            }
+            @media #{$breakpoint-desktop}{
+                top: -80px;
+            }
+        }
+    }
+}
+
 
 

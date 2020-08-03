@@ -1,4 +1,5 @@
 .blog_section{
+  
     .blog-content{
         margin-top: 35px;
         @media #{$breakpoint-desktop}{
@@ -179,3 +180,290 @@
         }
     }
 }
+
+.budget-content{
+    margin: 110px 0 160px;
+    @media #{$breakpoint-lg-desktop}{
+        margin: 90px 0 140px;
+    }
+    @media #{$breakpoint-desktop}{
+        margin: 80px 0 130px;
+    }
+    .row-wrap{
+        @include justify-content-center;
+    }
+    ul.budget-list{
+        li{
+            &:not(:last-child){
+                margin-bottom: 70px;
+                @media #{$breakpoint-lg-desktop}{
+                    margin-bottom: 50px;
+                }
+                @media #{$breakpoint-desktop}{
+                    margin-bottom: 30px;
+                }
+            }
+            @include display-flex(flex);
+            @include align-items-center;
+            figure{
+                flex: 0 0 325px;
+                img{
+                    width: 100%;
+                    height: 190px;
+                }
+                @media #{$breakpoint-lg-desktop}{
+                    flex: 0 0 280px;
+                    img{
+                        height: 170px;;
+                    }
+                }
+                @media #{$breakpoint-desktop}{
+                    flex: 0 0 250px;
+                    img{
+                        height: 150px;
+                    }
+                }
+            }
+            &.budget-items{
+                .info{
+                    padding-left: 25px;
+                    span.date{
+                        font-family: $nav-fonts;
+                        font-size: 14px;
+                        letter-spacing: .8px;
+                        text-transform: uppercase;
+                    }
+                    .common-title{
+                        margin: 15px 0 20px;
+                    }
+                    p.news-para{
+                        max-width: 690px;
+                        @include line-clamp(2);
+                    }
+                    @media #{$breakpoint-lg-desktop}{
+                        padding-left: 20px;
+                        span.date{
+                            font-size: 12px;
+                            letter-spacing: .8px;
+                        }
+                        p.news-para{
+                            max-width: 600px;
+                        }
+                    }
+                    @media #{$breakpoint-desktop}{
+                        padding-left: 15px;
+                        span.date{
+                            font-size: 10px;
+                            letter-spacing: .6px;
+                        }
+                        .common-title{
+                            margin: 10px 0 15px;
+                        }
+                        p.news-para{
+                            max-width: 550px;
+                        }
+                    }
+                }
+            }
+            &.mainbudget-items{
+                background-size: contain;
+                margin: 120px 0;
+                padding: 60px 40px;
+                @media #{$breakpoint-lg-desktop}{
+                    margin: 100px 0;
+                    padding: 50px 30px;
+                }
+                @media #{$breakpoint-desktop}{
+                   margin: 80px 0;
+                   padding: 40px 20px;
+                }
+                .info{
+                    background: $white-color;
+                    max-width: 420px;
+                    padding: 35px;
+                    @media #{$breakpoint-lg-desktop}{
+                        padding: 30px;
+                        max-width: 380px;
+                    }
+                    @media #{$breakpoint-desktop}{
+                        padding: 20px;
+                        max-width:  320px;
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination-wrap {
+        margin-top: 120px;
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-between;
+        @media #{$breakpoint-lg-desktop}{
+            margin-top: 100px;
+        }
+        @media #{$breakpoint-desktop}{
+            margin-top: 80px;
+        }
+        .pagination{
+            a{
+               @include flex_hr_center;
+                width: 45px;
+                height: 45px;
+                font-family: $nav-fonts;
+                transform: uppercase;
+                color: $secondary-color;
+                border: 1px solid transparent;
+                @include transition(all .3s ease);
+                &.current{
+                    border: 1px solid $secondary-color;
+                }
+                &:hover{
+                    background: $secondary-color;
+                    color: $white-color;
+                    border: $secondary-color;
+                }
+                @media #{$breakpoint-lg-desktop}{
+                    width: 35px;
+                    height: 35px;
+                }
+                @media #{$breakpoint-desktop}{
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        .page-nav-btn{
+            button{
+                height: 45px;
+                width: 170px;
+                &.is-border{
+                    color: $secondary-color;
+                    border: 1px solid $secondary-color;
+                    &:hover{
+                        background: rgba($secondary-color, .8);
+                        color: $white-color
+                    }
+                }
+                @media #{$breakpoint-lg-desktop}{
+                    height: 35px;
+                    width: 150px;
+                }
+                @media #{$breakpoint-desktop}{
+                    height: 25px;
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
+
+.budget-items{
+    margin-bottom: 130px;
+    @media #{$breakpoint-lg-desktop}{
+        margin-bottom: 110px;
+    }
+    @media #{$breakpoint-desktop}{
+        margin-bottom: 90px;
+    }
+    .row-wrap{
+        @include justify-content-center;
+    }
+    .budget-items-info{
+        max-width: 880px;
+        margin: 0 auto;
+        margin-top: -155px;
+        @media #{$breakpoint-lg-desktop}{
+            max-width: 640px;
+            margin-top: -120px;
+        }
+        @media #{$breakpoint-desktop}{
+            max-width: 600px;
+            margin-top: -100px;
+        }
+    
+        figure {
+            margin: 0 auto;
+            height: 630px;
+            padding-bottom: 100px;
+            @media #{$breakpoint-lg-desktop}{
+                height:  500px;
+                padding-bottom: 70px;
+            }
+            @media #{$breakpoint-desktop}{
+                height: 400px;
+                padding-bottom: 60px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .news-wrap{
+            margin-bottom: 70px;
+            .common-title{
+                margin-bottom: 30px;
+            }
+            @media #{$breakpoint-lg-desktop}{
+                margin-bottom: 50px;
+                .common-title{
+                    margin-bottom: 20px;
+                }
+            }
+            @media #{$breakpoint-desktop}{
+                margin-bottom: 40px;
+                .common-title{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .share-news{
+            margin-top: 20px;
+            span{
+                font-family: $nav-fonts;
+                text-transform: uppercase;
+                letter-spacing: .8px;
+            }
+            ul{
+                margin-top: 30px;
+                @media #{$breakpoint-lg-desktop}{
+                    margin-top: 20px;
+                }
+                @include display-flex(flex);
+                @include align-items-center;
+                li{
+                    &:not(:last-child){
+                        margin-right: 30px;
+                        @media #{$breakpoint-lg-desktop}{
+                            margin-right: 20px;
+                        }
+                        @media #{$breakpoint-desktop}{
+                           margin-right: 15px;
+                        }
+                    }
+                    a{
+                        width:24px;
+                        height: 24px;
+                        &:hover{
+                            img{
+                                @include transition(all .3s ease);
+                                transform: scale(1.2);
+                            }
+                        }
+                        @media #{$breakpoint-lg-desktop}{
+                           width: 20px;
+                           height: 20px;
+                        }
+                        @media #{$breakpoint-desktop}{
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

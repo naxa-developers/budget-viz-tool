@@ -54,6 +54,9 @@ header{
     }
     &.site-header{
         padding: 26px 1rem;
+        @media #{$breakpoint-lg-desktop}{
+            padding: 20px 1rem;
+        }
         @media #{$breakpoint-desktop}{
             padding: 18px 1rem;
         }
@@ -69,6 +72,9 @@ header{
                     }
                     @media #{$breakpoint-desktop}{
                         max-width: 160px;
+                    }
+                    @media #{$breakpoint-pt}{
+                        max-width: 120px;
                     }
                     @include transition(all .4s ease);
                     &.logo-white{
@@ -113,18 +119,20 @@ header{
                         a{
                             font-family: $nav-fonts;
                             color:$white-color;
-                            font-size: .875rem;
+                            font-size: .785rem;
                             font-weight: 400;
                             @include transition(all .3s ease-in-out);
                             text-transform: uppercase;
+                            letter-spacing: .9px;
                             &.active,&:hover{
                                 color:$primary-color;
                             }
                             @media #{$breakpoint-lg-desktop}{
-                                font-size: .75rem;
+                                font-size: .725rem;
                             }
                             @media #{$breakpoint-desktop}{
-                                font-size: .625rem;
+                                font-size: .6rem;
+                                letter-spacing: .6px;
                             }
                             @media #{$breakpoint-md}{
                                 font-size: .75rem;

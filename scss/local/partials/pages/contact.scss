@@ -48,11 +48,11 @@
                     margin-bottom: 20px;
                 }
                 span.company-addr{
-                    font-size: 14px;
+                    font-size: 13.75px;
                     line-height: 24px;
                     color: $white-color;
                     display: block;
-                    max-width: 100px;
+                    max-width: 150px;
                     @media #{$breakpoint-lg-desktop}{
                         font-size: 10px;
                         line-height: 20px;
@@ -60,6 +60,7 @@
                     @media #{$breakpoint-desktop}{
                         font-size: 8px;
                         line-height: 17px;
+                        max-width: 100px;
                     }
                     @media #{$breakpoint-sm}{
                         display: inline-block;
@@ -82,7 +83,7 @@
                         }
                         span, a{
                             display: inline;
-                            font-size: 14px;
+                            font-size: 13px;
                             line-height: 16px;
                             @media #{$breakpoint-lg-desktop}{
                                 font-size: 10px;

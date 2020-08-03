@@ -930,9 +930,13 @@
             }
         }
     }
-        &#open-modal-escalated{
-            z-index: 1111;
-        }
+    &#open-modal-escalated{
+        z-index: 1111;
+    }
+    &#open-modal-flights{
+        z-index: 1111;
+    }
+    
     &.open {
         z-index: 1011;
         opacity: 1;
@@ -946,6 +950,10 @@
                 transform: scale(1);
                 filter: alpha(opacity=100);
             }
+        }
+        
+        &#open-modal-flight{
+            z-index: 1111;
         }
 
     }

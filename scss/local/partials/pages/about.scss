@@ -79,52 +79,10 @@
     }
 }
 
-.about-header{
-    background-image: url('./.././img/about-budget-bg.png');
-    background-color: $dark-overlay;
-    background-repeat: no-repeat;
-    background-position: 0 -50px;
-    padding: 285px 0 95px;
-    @media #{$breakpoint-lg-desktop}{
-        padding: 160px 0 70px;
-    }
-    @media #{$breakpoint-desktop}{
-        padding: 120px 0 60px;
-    }
-    span{
-        text-transform: uppercase;
-        font-family: $nav-fonts;
-        font-size: 14px;
-        letter-spacing: .8px;
-        color: $primary-color;
-        display: block;
-        @media #{$breakpoint-lg-desktop}{
-           font-size: 13px;
-        }
-        @media #{$breakpoint-desktop}{
-            font-size: 11px;
-        }
-        @media #{$breakpoint-lg}{
-            text-align: center;
-        }
-    }
-    .common-title{
-        margin-top: 15px;
-        max-width: 1200px;
-        @media #{$breakpoint-lg-desktop}{
-            max-width: 1000px;
-        }
-        @media #{$breakpoint-desktop}{
-            margin-top: 10px;
-            max-width: 900px;
-        }
-    }
-}
-
 .about-info{
      padding: 160px 0 150px;
      @media #{$breakpoint-lg-desktop}{
-        padding: 65px 0 130px;
+        padding: 110px 0 150px;
     }
     @media #{$breakpoint-desktop}{
         padding: 100px 0 80px;
@@ -154,7 +112,8 @@
             max-width: 620px;
             padding-top: 100px;
             @media #{$breakpoint-lg-desktop}{
-                max-width: 550px;
+                max-width: 490px;
+                padding-top: 90px;
             }
             @media #{$breakpoint-desktop}{
                 max-width: 450px;
@@ -167,12 +126,9 @@
 .about-obj{
     background: $bg-color;
     position: relative;
-    padding: 80px 0;
-    @media #{$breakpoint-lg-desktop}{
-        padding: 60px 0;
-    }
+    padding: 90px 0;
     @media #{$breakpoint-desktop}{
-        padding: 40px 0;
+        padding: 60px 0;
     }
     &::after{
         position: absolute;
@@ -185,15 +141,18 @@
         right: 0;
         left: 0;   
         background-image: url("./.././img/Clip.png");   
-        background-size: 850px;
+        background-size: 850px 100%;
         background-position: right center;   
         background-repeat: no-repeat;    
         @media #{$breakpoint-lg-desktop}{
-           background-size: 700px;
+           background-size: 680px 100%;
         }
         @media #{$breakpoint-desktop}{
-            background-size: 500px;
+            background-size: 550px 100%;
         }  
+        @media #{$breakpoint-xl}{
+            background-size: 480px 100%;
+        }
         @media #{$breakpoint-lg}{
             background-size: 320px;
         }
@@ -211,8 +170,12 @@
     }
     ul.obj-list-wrap{
         margin-top: 40px;
+        @media #{$breakpoint-lg-desktop}{
+            margin-top: 30px;
+            max-width: 520px;
+        }
         @media #{$breakpoint-desktop}{
-            margin-top: 25px;
+            margin-top: 20px;
         }
         li.obj-items{
             @include display-flex(flex);
