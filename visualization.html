@@ -30,13 +30,15 @@
 
     <!-- stylesheet start -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/apexcharts.css">
+    <link rel="stylesheet" href="css/custom-charts.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body class=" ">
-
-    <div class="pg-wrap">
+    <div class="pg-wrap viz-wrap">
         <header class="site-header is-bg">
             <div class="container">
                 <div class="wrap-header">
@@ -74,84 +76,170 @@
             </div>
         </header>
 
-        <section class="page-header about-header">
+        <section class="viz-header background-dark">
             <div class="container">
                 <div class="wrapper">
-                    <span>About</span>
-                    <div class="common-title">
-                        <h2 class="title">
-                            Building a more transparent provincial governments through an open budget portal.
-                        </h2>
+                    <h3 class="title">Province <span>1</span></h3>
+                    <div class="row gx-2 gy-2 viz-row">
+                        <div class="col-lg-3 col-md-12">
+                            <figure><img src="./img/Province1.svg" alt="Province1"></figure>
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <div class="viz-info">
+                                <div class="info-category">
+                                    <div class="category-column">
+                                        <span class="data-label">Population</span>
+                                        <h4 class="data">4,534,943</h4>
+                                    </div>
+
+                                    <div class="category-column">
+                                        <span class="data-label">Male</span>
+                                        <h4 class="data">47.77 <span>%</span></h4>
+                                    </div>
+
+                                    <div class="category-column">
+                                        <span class="data-label">Female</span>
+                                        <h4 class="data">53.23 <span>%</span></h4>
+                                    </div>
+
+                                    <div class="category-column">
+                                        <span class="data-label">Economic Growth</span>
+                                        <h4 class="data">6.5 <span>%</span></h4>
+                                    </div>
+                                </div>
+
+                              <div class="info-budget">
+                                    <div class="budget-column">
+                                        <span class="data-label">Share in Gross Domestic Product</span>
+                                        <h4 class="data">17.5 <span>%</span></h4>
+                                    </div>
+
+                                    <div class="budget-column">
+                                        <span class="data-label">Human Development Index</span>
+                                        <h4 class="data">0.5 <span>%</span></h4>
+                                    </div>
+
+                                    <div class="budget-column">
+                                        <span class="data-label">Multidimensional Poverty Index</span>
+                                        <h4 class="data">19.7 <span>%</span></h4>
+                                    </div>
+
+                                    <div class="budget-column">
+                                        <span class="data-label">Total Gross Domestic Product</span>
+                                        <span class="rate">NRP</span>
+                                        <h4 class="data">525,095 <span>Million</span></h4>
+                                    </div>
+
+                                    <div class="budget-column">
+                                        <span class="data-label">Per Capita income</span>
+                                        <span class="rate">USD$</span>
+                                        <h4 class="data">1,024 <span>USD$</span></h4>
+                                    </div>
+
+                                    <div class="budget-column">
+                                        <span class="data-label">Revenue collected</span>
+                                        <span class="rate">NRP</span>
+                                        <h4 class="data">8547.1 <span>Million</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="about-info">
-            <div class="container">
-                <div class="wrapper">
-                    <div class="row row-wrap mx-0">
-                        <div class="col-md-6 col-wrap">
-                            <div class="content">
-                                <div class="common-title">
-                                    <h3 class="section-title">
-                                        An Open Data Initiative of Public Procurement Monitoring Office to create a single repository of data on public procurement to the public.
-                                    </h3>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <a href="#"><img src="https://werobotics.org/wp-content/uploads/2018/05/world-bank-logo.jpg" alt="inn_logo"></a>
+        <section class="viz-body">
+            <div class="container-fluid">
+                <div class="viz-content">
+                    <div class="row g-0 gy-md-4 gy-sm-4">
+                        <div class="col-xl-4 col-lg-3 col-md-12">
+                            <div class="chart-section">
+                                <div class="contents">
+                                    <h4 class="data is-dark">Budget Source</h4>
+                                    <div class="chart">
+                                        <div id="pie-chart">
+                                        
+                                        </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <a href="#"><img src="https://asiafoundation.org/wp-content/uploads/2016/09/logo.png" alt="ccs_logo"></a>
-                                    </div>
-                                     <div class="col-md-4">
-                                        <a href="#"><img src="img/d4d.png" alt="ccs_logo"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-wrap">
-                            <div class="content info-content">
-                                <p class="info">
-                                    The provincial budget portal contains the province level budget allocation and spending data published by the provincial government. The portal aims to create an effective use of public information to demand accountability, geared for institutional improvement, efficient services delivery, and an equitable society.
-                                </p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-            
-        </section>
+                                    <div class="chart-info">
+                                        <div class="chart-data">
+                                            <span class="data-label is-dark">Federal Aid</span>
+                                            <span class="rate is-dark">NRP</span>
+                                            <h4 class="data">21,207,400 <span> Million</span></h4>
+                                        </div>
 
-        <section class="about-obj">
-            <div class="container">
-                <div class="wrapper">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-7">
-                            <div class="common-title">
-                                <h2 class="title is-dark">Our Missions</h2>
+                                        <div class="chart-data">
+                                            <span class="data-label is-dark">Provincial Resources</span>
+                                            <span class="rate is-dark">NRP</span>
+                                            <h4 class="data">20,993,010 <span> Million</span></h4>
+                                        </div>
+                                    </div>
+                                    <div class="chart-note">
+                                        <p><strong>Note:</strong>&nbsp; All Rupees amounts shown here represent province reported obligated amounts.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <ul class="obj-list-wrap">
-                                <li class="obj-items">
-                                    <i class="material-icons">check_circle</i>
-                                    <span>To inform people, the policy makers how the budgets have been allocated and spent in the provinces </span>
-                                </li>
-                                <li class="obj-items">
-                                    <i class="material-icons">check_circle</i>
-                                    <span>Create buzz on the province budget</span>
-                                </li>
-                                <li class="obj-items">
-                                    <i class="material-icons">check_circle</i>
-                                    <span>Help the development partners, students, 
-                                        researchers, policy enthusiasts, journalists to know more on the provincial budget</span>
-                                </li>
-                                <li class="obj-items">
-                                    <i class="material-icons">check_circle</i>
-                                    <span>Help people raise questions to the policy makers, know the priority of provinces.</span>
-                                </li>
-                            </ul>
+                        </div>
+                        <div class="col-xl-8 col-lg-9 col-md-12">
+                            <div class="info-section">
+                                <div class="contents">
+                                    <h4 class="data is-dark">You are viewing Provincial Budget of <span>Province <span class="num">1</span></span></h4>
+                                    <h6 class="data-subtitle">Choose an option below to start your exploration.</h6>
+                                    <div class="budget-info-contents">
+                                        <div class="select-content">
+                                            <div class="sel-dropdown">
+                                                <label for="budget">Budget</label>
+
+                                                <select id="budget">
+                                                    <option value="1">Actual Budget</option>
+                                                    <option value="2">Average Budget</option>
+                                                </select>
+                                            </div>
+                                            <div class="sel-dropdown">
+                                                <label for="year">Year</label>
+
+                                                <select id="year">
+                                                    <option value="">2076</option>
+                                                    <option value="">2075</option>
+                                                    <option value="">2074</option>
+                                                    <option value="">2073</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <ul class="budget-ul">
+                                            <li class="budget-li-items">
+                                                <span class="label">Provincial Parliament<strong>90,125</strong></span>
+                                            </li>
+                                            <li class="budget-li-items">
+                                                <span class="label">Ministry of Physical Infra structure <br/> and Development<strong>109,883</strong></span>
+                                            </li>
+                                            <li class="budget-li-items">
+                                                <span class="label">Ministry of internal Affairs <br/> and Law<strong>26,842</strong></span>
+                                            </li>
+                                            <li class="budget-li-items">
+                                                <span class="label">Ministry of Land <br/> Management, Agriculture <br/>and Cooperative<strong>23,142</strong></span>
+                                            </li>
+                                            <li class="budget-li-items">
+                                                <span class="label">Ministry of Economic Affairs <br/> and planning<strong>37,303</strong></span>
+                                            </li>
+                                            <li class="budget-li-items">
+                                                <span class="label">Ministry of Industry, <br/> Toursim, Forests and <br/> Environment<strong>41,851</strong></span>
+                                            </li>
+                                            <li class="budget-li-items">
+                                                <span class="label">Office of the Chief Minister <br/> and Council of Ministers<strong>20,906</strong></span>
+                                            </li>
+                                            <li class="budget-li-items">
+                                                <span class="label">Ministry of Social <br/>Development<strong>880,55</strong></span>
+                                            </li>
+                                        </ul>
+                                        <p class="note">All Rupees amounts shown here represent province reported obligated amounts.</p>
+                                        <div class="btn-wrap">
+                                            <button class="common-button is-bg">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -254,10 +342,10 @@
         </section>
 
     </div>
-           
     <!-- Jquery Core Js -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
     <script src="js/viz.js"></script>
 
 </body>
