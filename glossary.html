@@ -1,31 +1,756 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body { 
-    margin:0;
-}
-.image {
-    position:absolute;
-    width:100%; 
-    height:400%; 
-    background-image:url('Glossary.png');
-    background-size:cover;
-}
-.content {
-    position:absolute; 
-    width:100%; 
-    top:100%; 
-    height: 100px;
-}
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SOCIAL MEDIA META -->
+    <meta property="og:description" content="Budget Viz">
+    <meta property="og:image" content="preview.html">
+    <meta property="og:site_name" content="Budget Viz">
+    <meta property="og:title" content="Budget Viz">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://naxa.com.np">
+
+    <!-- TWITTER META -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Budget Viz">
+    <meta name="twitter:creator" content="@Budget Viz">
+    <meta name="twitter:title" content="Budget Viz">
+    <meta name="twitter:description" content="Budget Viz">
+    <meta name="twitter:image" content="preview.html">
+
+    <!--title-->
+    <title>Budget Viz</title>
+
+    <!-- faveicon start   -->
+    <!-- <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32"> -->
+
+    <!-- stylesheet start -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/apexcharts.css">
+    <link rel="stylesheet" href="css/custom-charts.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
 
-<div class='image'></div>
+<body class=" ">
+    <div class="pg-wrap viz-wrap">
+        <header class="header-dark site-header is-bg">
+            <div class="container">
+                <div class="wrap-header">
+                    <div class="header-in">
+                        <a href="index.html" class="logo">
+                            <img class="logo-black" src="img/logo-black.svg" alt="logo">
+                        </a>
+                        <div class="menu-wrap">
+                            <div class="menu">
+                                <ul>
+                                    <li>
+                                        <a href="visualization.html" class="active">Budget Visualization</a>
+                                    </li>
+                                    <li>
+                                        <a href="glossary.html" class="">Glossary</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="">Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href="about.html" class="">About</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="toggle-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
 
+        <section class="glossary">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="row row-wrap">
+                        <div class="col-lg-9 col-md-10">
 
+                            <div class="section-title-wrap">
+                                <div class="common-title">
+                                    <h3 class="title is-dark">Glossary</h3>
+                                </div>
+                                <div class="date">
+                                    <span>LAST UPDATED: 20 JUN 2020</span>
+                                </div>
+                            </div>
+
+                            <div class="section-content">
+                                <div class="search-title-bar">
+                                    <div class="form-group">
+                                        <input type="search" class="form-control" placeholder="Search for a term">
+                                        <i class="material-icons">search</i>
+                                    </div>
+                                </div>
+                                <div class="search-content">
+                                    <div class="index-search">
+                                        <a href="#0">0</a>
+                                        <a href="#a" class="current">A</a>
+                                        <a href="#b">B</a>
+                                        <a href="#c">C</a>
+                                        <a href="#d">D</a>
+                                        <a href="#e">E</a>
+                                        <a href="#f">F</a>
+                                        <a href="#g">G</a>
+                                        <a href="#h">H</a>
+                                        <a href="#i">I</a>
+                                        <a href="#j">j</a>
+                                        <a href="#k">k</a>
+                                        <a href="#l">l</a>
+                                        <a href="#m">m</a>
+                                        <a href="#n">n</a>
+                                        <a href="#o">o</a>
+                                        <a href="#p">p</a>
+                                        <a href="#q">q</a>
+                                        <a href="#r">r</a>
+                                        <a href="#s">s</a>
+                                        <a href="#t">t</a>
+                                        <a href="#u">u</a>
+                                        <a href="#v">v</a>
+                                        <a href="#w">w</a>
+                                        <a href="#x">x</a>
+                                        <a href="#y">y</a>
+                                        <a href="#z">z</a>
+                                    </div>
+                                    <div class="index-content">
+                                        <ul class="index-li">
+                                            <li class="index-item">
+                                                <a id="a">
+                                                    <span class="index-letter">A</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Acquisition of Assets</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Action Date</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Action Type</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                       <li>
+                                                           <b>Agency</b>
+                                                           <p>On this website, we use the term agency to mean any federal department, commission, or other Nepal government entity. Agencies can have multiple sub-agencies. For example, the National Park Service is a sub-agency of the Nepal Department of the Interior.</p>
+                                                       </li>
+                                                       <li>
+                                                           <b>Agency Identifier</b>
+                                                           <p>Identifies the agency responsible for a Treasury account. This is a 3-digit number that is a part of a Treasury Account Symbol (TAS).</p>
+                                                       </li>
+                                                       <li>
+                                                           <b>Award</b>
+                                                           <p>Money the federal government has promised to pay a recipient. Funding may be awarded to a company, organization, government entity (i.e., state, local, tribal, federal, or foreign), or individual. It may be obligated (promised) in the form of a contract, grant, loan, insurance, direct payment, etc.</p>
+                                                       </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="b">
+                                                    <span class="index-letter">B</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Blorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Blorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Bconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="c">
+                                                    <span class="index-letter">C</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Cadias ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Celliat adipscing</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="d">
+                                                    <span class="index-letter">D</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Dquisquam</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Ddolor velit</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="e">
+                                                    <span class="index-letter">E</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Eeque Bonorum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Ealorum accusantium</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="f">
+                                                    <span class="index-letter">F</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Fquaerat commodi</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Finibus Bonorum </b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="g">
+                                                    <span class="index-letter">G</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Glorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Glorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Gconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="h">
+                                                    <span class="index-letter">H</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Hlorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Hlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Hconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="i">
+                                                    <span class="index-letter">I</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Ilorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Ilorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Iconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="j">
+                                                    <span class="index-letter">J</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Jorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Jlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Jconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="k">
+                                                    <span class="index-letter">K</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Korem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Klorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Kconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="l">
+                                                    <span class="index-letter">L</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Lorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Llorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Lconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="m">
+                                                    <span class="index-letter">M</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Morem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Mlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Mconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="n">
+                                                    <span class="index-letter">N</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Norem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Nlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Nconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="o">
+                                                    <span class="index-letter">O</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Oorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>olorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>oconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="p">
+                                                    <span class="index-letter">P</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Porem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Plorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Pconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="q">
+                                                    <span class="index-letter">Q</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Qorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Qlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Qconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="r">
+                                                    <span class="index-letter">R</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Rorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Rlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Rconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="s">
+                                                    <span class="index-letter">S</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Sorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Slorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Sconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="t">
+                                                    <span class="index-letter">t</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Torem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Tlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Tconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="u">
+                                                    <span class="index-letter">U</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Uorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Ulorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Uconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="v">
+                                                    <span class="index-letter">V</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Vorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Vlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Vconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="w">
+                                                    <span class="index-letter">W</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Worem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Wlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Wconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="x">
+                                                    <span class="index-letter">X</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>Xorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Xlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>Xconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="y">
+                                                    <span class="index-letter">Y</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>yorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>ylorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>yconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="z">
+                                                    <span class="index-letter">z</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>zorem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>zlorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>zconsecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                            <li class="index-item">
+                                                <a id="0">
+                                                    <span class="index-letter">#</span>
+                                                    <ul class="inner-list">
+                                                        <li>
+                                                            <b>@_rem ipsum</b>
+                                                            <p>This major object class includes an agency’s procurement of assets, including those that have lost value (depreciated). Some examples of assets, according to this definition, include equipment, land, physical structures, investments, and loans.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>*lorem</b>
+                                                            <p>The date the action being reported was issued / signed by the Government or a binding agreement was reached.</p>
+                                                        </li>
+                                                        <li>
+                                                            <b>$consecuter</b>
+                                                            <p>Provides information on the type of change made to an award. For example, the change may be the result of a continuation, revision, and/or adjustment to completed project.</p>
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                        </ul>       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- contact -->
+        <section class="contact_section" id="contact">
+            <div class="container">
+                <div class="wrapper h-wrap">
+                    <div class="contact-content">
+                        <div class="common-title">
+                            <h2 class="title">Contact</h2>
+                        </div>
+                        <div class="contact-row">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="info">
+                                        <h5 class="title">Information</h5>
+                                        <div class="info-addr">
+                                            <span class="company-addr">Alankar Innovations <span> Kathmandu, Nepal</span> </span>
+                                            <ul>
+                                                <li><span class="label">Phone</span><a class="label-info">+977 01-4329 504, 01-4329 504</a></li>
+                                                <li><span class="label">Email</span><a class="label-info">matthew.mendez@mail.com</a></li>
+                                                <li><span class="label">Web</span><a class="label-info">Info@alankar.com</a></li>
+                                            </ul>
+                                        </div>
+                                        <ul class="social-media-grp">
+                                            <li class="social-item"><a href="https://www.facebook.com/"><img src="./img/facebook.svg" alt="facebook"></a></li>
+                                            <li class="social-item"><a href="https://twitter.com"><img src="./img/twitter.svg" alt="twitter"></a></li>
+                                            <li class="social-item"><a href="https://www.instagram.com"><img src="./img/instagram.svg" alt="instagram"></a></li>
+                                            <li class="social-item"><a href="https://www.youtube.com/"><img src="./img/youtube.svg" alt="youtube"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+    
+                                <div class="col-md-8">
+                                    <div class="contact">
+                                        <h5 class="title">Contact form</h5>
+                                        <form action="">
+                                            <div class="form-group">
+                                                <input type="text" name="name" id="inputname" class="form-control" placeholder="" required="">
+                                                <label for="inputname">Name</label>
+                                                <span class="border-span"></span>
+                                            </div>
+
+                                            <div class="row row-wrap">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" name="email" id="inputemail" class="form-control" placeholder="" required="">
+                                                        <label for="inputemail">Email</label>
+                                                        <span class="border-span"></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input type="text" name="email1" id="inputemai1" class="form-control" placeholder="" required="">
+                                                        <label for="inputemail1">Email</label>
+                                                        <span class="border-span"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                                <div class="form-group">
+                                                <input type="text" name="message" id="inputmsg" class="form-control" placeholder="" required="">
+                                                <label for="inputmsg">Message</label>
+                                                <span class="border-span"></span>
+                                            </div>
+                                            <button class="common-button is-border">Send</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <div class="footer-wrap">
+                            <p class="footer-para is-icon-reverse">
+                                <a href="#/" class="scroll-top"><i class="material-icons">expand_less</i></a>
+                                Top
+                            </p>
+                            <div class="web-footer">
+                                <div class="logo-center"><img src="./img/logo-white.svg" alt="logo"></div>
+                                <ul class="footer-links">
+                                    <li class="link-item"><a href="#home">budget visualization</a></li>
+                                    <li class="link-item"><a href="#about">About</a></li>
+                                    <li class="link-item"><a href="#/">News</a></li>
+                                    <li class="link-item"><a href="#/">Glossary</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-copyright">
+                            <span>Copyright 2020, Open Budget Nepal. All Rights Reserved.</span>
+                            <span>Designed by <a href="http://naxa.com.np">Naxa</a></span>
+                        </div>
+                    </footer>
+                </div>
+            </div>          
+        </section>
+    </div>
+    <!-- Jquery Core Js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/apexcharts.min.js"></script>
+    <script src="js/viz.js"></script>
 
 </body>
+
+
+
 </html>
